@@ -1,0 +1,11 @@
+const Pool = require("pg").Pool;
+
+const pool = new Pool({
+    user:"janet",
+    password:"janet12345",
+    host:"localhost",
+    port:"5432",
+    database:"perntodo"
+});
+
+module.experts = pool;
