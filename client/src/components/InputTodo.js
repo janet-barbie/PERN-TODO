@@ -11,7 +11,8 @@ const InputTodo = ()=>{
                 headers:{"Content-Type":"application/json"},
                 body:JSON.stringify(body)
             })
-            console.log(response);
+            window.location = "/"
+            //console.log(response);
         } catch (error) {
             console.error(error.message)
             
@@ -22,8 +23,7 @@ const InputTodo = ()=>{
         <>
         <h1 className="text-center mt-5">Input Todo List</h1>
         <form className="d-flex mt-5" onSubmit = {onSubmitForm}>
-            <input t
-            ype = "text" 
+            <input type = "text" 
             className="form-control" 
             value={description} 
             onChange={e => setDescription(e.target.value)}/>
